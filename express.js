@@ -24,7 +24,7 @@ app.post("/upload", upload.single("csvFile"), (req, res) => {
   const csvFilePath = req.file.path;
 
   // Run Python script
-  exec(`python3 ml.py ${csvFilePath}`, (error, stdout, stderr) => {
+  exec(`python ml.py ${csvFilePath}`, (error, stdout, stderr) => {
     if (error) {
       console.error("Error executing Python script:", error);
       return res.status(500).send("Error processing CSV file");
