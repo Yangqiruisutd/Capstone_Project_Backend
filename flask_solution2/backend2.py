@@ -54,4 +54,5 @@ def predict():
         return render_template('error.html', error_message=str(e))
 
 if __name__ == '__main__':
+    app.run(host='0.0.0.0')
     app.run(debug=True)
