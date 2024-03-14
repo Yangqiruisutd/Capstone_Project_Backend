@@ -5,15 +5,53 @@
 </head>
 <body>
     <h2>Enter Features for Prediction</h2>
+    <style>
+        .form-group {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+    
+        .form-group label {
+            flex: 1;
+            min-width: 160px;
+        }
+    
+        .form-group input {
+            flex: 2;
+        }
+    </style>
+    
     <form action="/predict" method="post">
-        kWh per Rm. Nights: <input type="text" name="feature1"><br>
-        Demand: <input type="text" name="feature2"><br>
-        Rm. Night: <input type="text" name="feature3"><br>
-        Mean Temperature BKK: <input type="text" name="feature4"><br>
-        Food Covers-Outlet: <input type="text" name="feature5"><br>
-        Cover-Banquet: <input type="text" name="feature6"><br>
-        Total: <input type="text" name="feature7"><br>
+        <div class="form-group">
+            <label for="feature1">kWh per Rm. Nights:</label>
+            <input type="text" name="feature1" id="feature1">
+        </div>
+        <div class="form-group">
+            <label for="feature2">Demand:</label>
+            <input type="text" name="feature2" id="feature2">
+        </div>
+        <div class="form-group">
+            <label for="feature3">Rm. Night:</label>
+            <input type="text" name="feature3" id="feature3">
+        </div>
+        <div class="form-group">
+            <label for="feature4">Mean Temperature BKK:</label>
+            <input type="text" name="feature4" id="feature4">
+        </div>
+        <div class="form-group">
+            <label for="feature5">Food Covers-Outlet:</label>
+            <input type="text" name="feature5" id="feature5">
+        </div>
+        <div class="form-group">
+            <label for="feature6">Cover-Banquet:</label>
+            <input type="text" name="feature6" id="feature6">
+        </div>
+        <div class="form-group">
+            <label for="feature7">Total:</label>
+            <input type="text" name="feature7" id="feature7">
+        </div>
         <input type="submit" value="Predict">
-    </form>
+    </form>    
 </body>
 </html>
